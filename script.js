@@ -1,3 +1,3 @@
-const firstButton = document.getElementById("first-button");
+// const firstButton = document.getElementById("first-button");
 
-firstButton.addEventListener("click", () => console.log("Click"));
+// firstButton.addEventListener("click", () => console.log("Click"));

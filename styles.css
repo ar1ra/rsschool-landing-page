@@ -1,3 +1,145 @@
-main {
-    background-color: teal;
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #e1d4c9;
+  --text: #403f3d;
+  --white: #fff;
+  --max: 1400px;
+}
+
+body.dark {
+  --bg: #292826;
+  --text: #e1d4c9;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", Arial, sans-serif;
+  transition: background-color .25s ease, color .25s ease;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+summary {
+  font: inherit;
+}
+
+.header {
+  height: 86px;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 28px;
+
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  align-items: center;
+  gap: 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  line-height: 0;
+}
+
+.brand img {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+.desktop-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(22px, 3vw, 52px);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.desktop-nav a {
+  opacity: 0.9;
+}
+
+.desktop-nav a:hover {
+  opacity: 0.55;
+}
+
+/* Right-side controls */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.theme-toggle {
+  width: 68px;
+  height: 31px;
+  padding: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+
+  color: var(--text);
+  cursor: pointer;
+
+  transition:
+    background-color var(--ease),
+    border-color var(--ease);
+}
+
+.theme-toggle img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.menu {
+  display: none;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .menu {
+        display: flex;
+    }
 }
