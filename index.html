@@ -7,7 +7,7 @@
   <title>Coffee shop</title>
   <link rel="icon" type="image/svg" href="assets/header_assets/coffee_cup_icon_dark.svg">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <script src="themeToggle.js" defer></script>
 </head>
 
 <body>
@@ -60,8 +60,30 @@
             alt="coffee cup icon"></a>
       </div>
     </section>
-    <section>
-      <h2>Second section</h2>
+    <section class="favorite-coffee-section">
+      <h2>Choose your <span>favorite</span> coffee</h2>
+      <div class="slider-control-arrows">
+        <button class="slider-left-arrow">
+          <img src="assets/slider_section_assets/slider_arrow.svg" alt="slider arrow">
+        </button>
+        <button class="slider-right-arrow">
+          <img src="assets/slider_section_assets/slider_arrow.svg" alt="slider arrow">
+        </button>
+      </div>
+      <div class="slider">
+        <img width="480" height="480" src="assets/slider_section_assets/coffee_slider.png" alt="coffee image">
+        <h3>S’mores Frappuccino</h3>
+        <p class="medium-text slider-description">This new drink takes an espresso and mixes it with brown sugar and
+          cinnamon before being
+          topped with oat
+          milk.</p>
+        <h3>$5.50</h3>
+      </div>
+      <div class="slider-control-tabs">
+        <button class="active-slide"></button>
+        <button></button>
+        <button></button>
+      </div>
     </section>
   </main>
   <footer>
