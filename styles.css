@@ -212,6 +212,11 @@ button {
   gap: 16px;
 }
 
+.slider img {
+  width: 480px;
+  height: 480px;
+}
+
 .slider.active {
   animation: fadeIn 0.3s ease-in-out forwards;
 }
@@ -292,5 +297,16 @@ button {
     font-size: 32px;
     font-weight: 600;
     line-height: 125%;
+  }
+}
+
+@media (max-width: 500px) {
+  .slider img {
+    width: 340px;
+    height: 340px;
+  }
+
+  .slider-control-arrows button {
+    display: none;
   }
 }
