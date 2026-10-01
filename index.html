@@ -7,7 +7,9 @@
   <title>Coffee shop</title>
   <link rel="icon" type="image/svg" href="assets/header_assets/coffee_cup_icon_dark.svg">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <script src="themeToggle.js" defer></script>
+  <script type="module" src="slider.js" defer></script>
+  <script src="burgerMenu.js" defer></script>
 </head>
 
 <body>
@@ -16,11 +18,19 @@
       <img id="logo_img" src="assets/header_assets/logo.svg" alt="logo icon" aria-hidden="true">
     </a>
 
-    <nav class="desktop-nav">
-      <a href="#coffee">Favorite coffee</a>
+    <nav id="navigation" class="navigation">
+      <a href="#favorite_coffee">Favorite coffee</a>
       <a href="#about">About</a>
       <a href="#app">Mobile app</a>
       <a href="#contact">Contact us</a>
+      <div class="menu-link-container decstop-menu-link-container">
+        <a id="menu_link" href="#" class="menu-link">
+          <span>Menu</span>
+          <span>
+            <img id="menu_link_img" src="assets/header_assets/coffee_cup_icon_dark.svg" alt="coffee cup icon" />
+          </span>
+        </a>
+      </div>
     </nav>
 
     <div class="header-actions">
@@ -40,8 +50,8 @@
           </span>
         </a>
       </div>
-      <button class="burger-menu">
-        <img src="assets/header_assets/burger_menu_icon.svg" alt="burger menu icon">
+      <button id="burger_menu_button" class="burger-menu">
+        <img id="burger_menu_img" src="assets/header_assets/burger_menu_icon.svg" alt="burger menu icon">
       </button>
     </div>
   </header>
@@ -60,8 +70,31 @@
             alt="coffee cup icon"></a>
       </div>
     </section>
-    <section>
-      <h2>Second section</h2>
+    <section id="favorite_coffee" class="favorite-coffee-section">
+      <h2>Choose your <span>favorite</span> coffee</h2>
+      <div class="slider-control-arrows">
+        <button id="slider_left_arrow" class="slider-left-arrow">
+          <img src="assets/slider_section_assets/slider_arrow.svg" alt="slider arrow">
+        </button>
+        <button id="slider_right_arrow" class="slider-right-arrow">
+          <img src="assets/slider_section_assets/slider_arrow.svg" alt="slider arrow">
+        </button>
+      </div>
+      <div id="slider_container" class="slider-container">
+        <div class="slider">
+          <img src="assets/slider_section_assets/coffee_slider-1.png" alt="coffee image">
+          <h3>S’mores Frappuccino</h3>
+          <p class="medium-text slider-description">This new drink takes an espresso and mixes
+            it
+            with brown sugar and
+            cinnamon before being
+            topped with oat
+            milk.</p>
+          <h3>$<span>5.50</span></h3>
+        </div>
+      </div>
+      <div id="slider_control_tabs" class="slider-control-tabs">
+      </div>
     </section>
   </main>
   <footer>
